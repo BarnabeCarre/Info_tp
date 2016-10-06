@@ -8,7 +8,7 @@ from math import *
 n10 = int(input("nombre en base 10 : "))
 
 #-----methode des pgp-----#
-
+time.clock()
 nbr10 = n10
 
 nbr2 = []
@@ -25,9 +25,8 @@ while nbrtemp != 0 :            #s'arrette losqu'on a une valeur de n conforme
         nbr2[debut - n] = 1     #le nouveau bit trouvé est d'indice début-n
 
 print nbr10,"equivaut : ",nbr2
-
+tpgp = time.clock()
 #-----methode des div suc-----#
-
 nbr_10 = n10
 nbr_2=[]
 reste = nbr_10
@@ -36,5 +35,7 @@ while reste != 1 :
         reste = reste // 2
 nbr_2.append(1)
 nbr_2.reverse()
-print nbr_2
-
+tdiv = time.clock()
+print "temps par pgp : ", tpgp
+print "temps par div : ", tdiv
+print "delta : ", tdiv - tpgp 
