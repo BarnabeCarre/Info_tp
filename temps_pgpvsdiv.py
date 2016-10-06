@@ -5,17 +5,11 @@ import modperso as mp
 import time
 from math import *
 #-----varibable communes-----#
-
+n10 = int(input("nombre en base 10 : "))
 
 #-----methode des pgp-----#
 
-#etape 0, on recupère le chiffre à traité
-
-nbr10 = int(input("nombre en base 10 : "))
-while nbr10 < 1:
-        nbr10=int(input("il faut qu'il soit >= 1, nbr =? "))
-
-#etape 1, on initialise toutes les variables ou chaines
+nbr10 = n10
 
 nbr2 = []
 n = mp.pgp(nbr10,2)             #plus grande puissance de nbr10 pour la base 2
@@ -34,7 +28,7 @@ print nbr10,"equivaut : ",nbr2
 
 #-----methode des div suc-----#
 
-nbr_10 = int(input("nombre à convertir : "))
+nbr_10 = n10
 nbr_2=[]
 reste = nbr_10
 while reste != 1 :
